@@ -13,69 +13,24 @@
 
 ### 潛在影響：
 
-### 建議：
+### 修復建議：
 
 ---
 
-## 3. 測試範圍與方法 (Scope & Methodology)
+## 2. 技術發現與攻擊路徑詳述 (Findings)
 
-### 目標資訊：
-    #### 系統/靶機名稱：
-    #### IP 地址 / 網域：
-- 測試方式：
-    - 類型：黑箱
-    - 工具：
-- 參考標準：OWASP, MITRE ATT&CK
-
----
-
-## 4. 技術發現與漏洞詳述 (Findings)
-
-### 4.1 漏洞名稱
-
-- 風險分級：
-- 描述：
-- 發現過程：
-    1. 
-- 利用過程：
-    1. 
-- 成功證據：
-- 影響：
-- 修復建議：
-
-### 4.2 漏洞名稱
-
-- 風險分級：
-- 描述：
-- 發現過程：
-    1. 
-- 利用過程：
-    1. 
-- 成功證據：
-- 影響：
-- 修復建議：
+### 2.1 資訊蒐集(Reconnaissance)
+### 2.2 枚舉(Enumeration)
+### 2.3 初始存取(Initial Access)
+### 2.4 橫向移動(Lateral Movement)
+### 2.5 權限提升(Privilege Escalation)
+### 2.6 最終成果(Impact)
 
 ---
 
-## 5. 攻擊路徑總結 (Attack Path / Kill Chain)
+## 3. 學習回顧 (Lessons Learned)
 
-- 初始存取 (Initial Access)：
-- 橫向移動 (Lateral Movement)：
-- 提權 (Privilege Escalation)：
-- 最終成果 (Impact)：
-
----
-
-## 6. 學習回顧 (Lessons Learned)
-
-- 成功的部分：
-- 浪費時間的部分：
-- 新知識點：
-- 與實戰對應：
-
----
-
-## 7. 附錄 (Appendix)
-
-- Payload 清單：
-- 參考資源：
+### 成功的部分：
+### 浪費時間的部分：
+### 新知識點：
+### 與實戰對應：
