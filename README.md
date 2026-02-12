@@ -5,4 +5,4 @@
 -
 1. The record room regarding the red team/penetration testing/OSCP exam is written in Taiwan Mandarin.
 2. The write-up is modeled after a professional penetration test report and retains the traditional write-up style. It is based on noraj's OSCP-exam-report-template_whoisflynn_v3.2 and is simplified by me. The template can be found at: Machine_Write-Up/sample.md.
-3.The Penetration_tips section contains my scattered notes from the learning process. It will not record the knowledge I already knew at the moment I encountered it, but I will try my best to organize them. 
+3. The Penetration_tips section contains my scattered notes from the learning process. It will not record the knowledge I already knew at the moment I encountered it, but I will try my best to organize them. 
