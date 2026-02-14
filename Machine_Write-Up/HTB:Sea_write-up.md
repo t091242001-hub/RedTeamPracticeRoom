@@ -75,6 +75,11 @@ sudo gobuster dir -u http://10.129.4.85 -w /user/share/dirbuster/wordlists/direc
 
 使用Burp Suite確認XSS的注入點，用最小PoC驗證。
 
+<img width="1705" height="830" alt="螢幕擷取畫面 2026-02-13 185745" src="https://github.com/user-attachments/assets/b67f08c3-b441-4b6f-bcf9-ecf7f3c34c7d" />
+<img width="1277" height="695" alt="螢幕擷取畫面 2026-02-13 185842" src="https://github.com/user-attachments/assets/54dc8376-b7ba-4e19-8e67-698c5495e06b" />
+
+也可使用curl手動驗證
+
 ### 2.4 橫向移動(Lateral Movement)
 ### 2.5 權限提升(Privilege Escalation)
 ### 2.6 最終成果(Impact)
