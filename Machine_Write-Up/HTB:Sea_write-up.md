@@ -27,6 +27,10 @@
 ## 2. 技術發現與攻擊路徑詳述 (Findings)
 
 ### 2.1 資訊蒐集(Reconnaissance)
+
+使用Nmap掃描開放埠
+<img width="809" height="190" alt="螢幕擷取畫面 2026-02-13 164735" src="https://github.com/user-attachments/assets/0ac81bcb-cfd0-4648-80a0-1b914bca7c54" />
+
 ### 2.2 枚舉(Enumeration)
 ### 2.3 初始存取(Initial Access)
 ### 2.4 橫向移動(Lateral Movement)
