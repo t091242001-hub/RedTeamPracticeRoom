@@ -27,7 +27,36 @@
 ## 2. 技術發現與攻擊路徑詳述 (Findings)
 
 ### 2.1 資訊蒐集(Reconnaissance)
+
+使用Nmap掃描開放埠
+```bash
+sudo nmap -sT -Pn --min-rate 5000 -p- 10.129.228.217
+sudo nmap -sT -Pn -sV -sC -O -p22,80 10.129.228.217
+sudo nmap --script=vuln -p22,80 10.129.228.217
+```
+<img width="937" height="260" alt="螢幕擷取畫面 2026-02-14 202045" src="https://github.com/user-attachments/assets/719a6f7d-ae48-43aa-80a2-d80523552ca1" />
+<img width="1013" height="478" alt="螢幕擷取畫面 2026-02-14 202233" src="https://github.com/user-attachments/assets/4deb17e7-3fe1-483c-96a6-37a2a14e6674" />
+<img width="699" height="286" alt="螢幕擷取畫面 2026-02-14 202335" src="https://github.com/user-attachments/assets/dbefe1f1-2469-4414-8742-c373c5505c5a" />
+
+將取得的URL寫入/etc/hosts
+
+<img width="691" height="235" alt="螢幕擷取畫面 2026-02-14 202240" src="https://github.com/user-attachments/assets/89665509-5b4f-4970-ae91-8533ff6faaf1" />
+
+探索80web主頁
+<img width="1466" height="808" alt="螢幕擷取畫面 2026-02-14 202538" src="https://github.com/user-attachments/assets/ae0f208a-9bb5-4b37-86cd-d945104f5ab1" />
+<img width="1873" height="676" alt="螢幕擷取畫面 2026-02-14 202842" src="https://github.com/user-attachments/assets/ce056eff-76bf-4df7-b61c-cdd16a070d55" />
+<img width="602" height="235" alt="螢幕擷取畫面 2026-02-14 203008" src="https://github.com/user-attachments/assets/356b1151-a228-42ee-b7e9-7d4325abaa25" />
+
 ### 2.2 枚舉(Enumeration)
+
+使用gobuster爆破目錄
+```bash
+
+```
+
+
+
+
 ### 2.3 初始存取(Initial Access)
 ### 2.4 橫向移動(Lateral Movement)
 ### 2.5 權限提升(Privilege Escalation)
