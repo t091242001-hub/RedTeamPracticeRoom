@@ -117,6 +117,10 @@ mv shell.phar shell.jpeg
 <img width="1411" height="722" alt="螢幕擷取畫面 2026-02-19 201055" src="https://github.com/user-attachments/assets/209cedc0-1b6f-47dc-87c8-032600173045" />
 
 利用dfunc-bypasser篩選出未被禁用函數，文件需複製phpinfo的網頁原始碼
+```bash
+python2 dfunc-bypasser/dfunc-bypasser.py --file phpin.txt
+```
+
 <img width="1252" height="560" alt="螢幕擷取畫面 2026-02-19 201149" src="https://github.com/user-attachments/assets/d4f46edd-fb15-4cf6-9bce-4a8aec010827" />
 <img width="1527" height="687" alt="螢幕擷取畫面 2026-02-19 204025" src="https://github.com/user-attachments/assets/a0cacc9b-2ef2-48c3-967e-a660006cde33" />
 <img width="1269" height="425" alt="螢幕擷取畫面 2026-02-19 203936" src="https://github.com/user-attachments/assets/7e601f57-24ef-4f56-a925-32fb5d420bd9" />
