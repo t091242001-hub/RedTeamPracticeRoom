@@ -51,7 +51,7 @@ sudo nmap --script=vuln -p22,80 10.129.228.217
 
 使用gobuster爆破目錄
 ```bash
-sudo gobuster dir -u http://searcher.htb -w /usr/share/dirbuster/wordlist/directory-2.3-medium.txt
+sudo gobuster dir -u http://searcher.htb -w /usr/share/dirbuster/wordlists/directory-2.3-medium.txt
 ```
 <img width="1113" height="333" alt="螢幕擷取畫面 2026-02-14 205045" src="https://github.com/user-attachments/assets/36f1e2f3-f175-4c88-8677-7a9653d8df5f" />
 
