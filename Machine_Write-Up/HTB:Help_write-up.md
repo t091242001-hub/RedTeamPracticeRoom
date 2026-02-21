@@ -1,7 +1,7 @@
 ## 1. 執行摘要 (Executive Summary)
 
 ### 測試範圍與目標：
-1. 靶機名稱:Sau
+1. 靶機名稱:Help
 2. 難度:Easy
 3. IP:
 
