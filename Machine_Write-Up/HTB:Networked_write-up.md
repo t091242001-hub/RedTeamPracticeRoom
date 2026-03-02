@@ -87,6 +87,8 @@ sudo gobuster dir -u http://10.129.42.180 -w /usr/share/wordlists/dirb/cpmmpn.tx
 <img width="820" height="313" alt="螢幕擷取畫面 2026-03-02 171600" src="https://github.com/user-attachments/assets/6d813d3d-ea3a-4c04-9deb-5b8d30498d3c" />
 
 圖片檔無法顯示，我嘗試更改URL後成功顯示
+
+
 PS.我在這裡卡關很久，因為無論點開哪張圖片都會跳轉回/photo.php，我看了別人的write-up並未出現這種狀況
 
 <img width="1197" height="590" alt="螢幕擷取畫面 2026-03-02 171610" src="https://github.com/user-attachments/assets/2610f494-16c1-4cf3-a682-acd58e33344d" />
