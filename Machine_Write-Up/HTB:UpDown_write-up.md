@@ -177,7 +177,9 @@ sudo -l
 <img width="964" height="97" alt="螢幕擷取畫面 2026-02-19 220148" src="https://github.com/user-attachments/assets/8a16d532-ca75-4422-98d8-5006a30db564" />
 
 在GTFOBins可找到提權方法
+
 easy_install是舊版的Python包安裝工具，使用時，它會執行python setup.py install命令（打開安裝包➡️解析install邏輯➡️執行install命令），而提權邏輯就是在安裝包裡加戲。
+
 先將TF定義一個隨機路徑，然後生成一個內含執行bash語句的安裝檔，再用sudo權限讓easy_install執行這個安裝包，就相當於以sudo權限執行了加戲的腳本。
 ```bash
 TF=$(mktemp -d)
