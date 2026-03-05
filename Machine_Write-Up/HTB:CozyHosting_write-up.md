@@ -22,6 +22,7 @@
 ### 2.1 資訊蒐集(Reconnaissance)
 ### 2.2 枚舉(Enumeration)
 ### 2.3 初始存取(Initial Access)
+note.空格改成${IFS} base64編碼 |解碼 執行 全部再URL編碼
 ### 2.4 橫向移動(Lateral Movement)
 ### 2.5 權限提升(Privilege Escalation)
 ### 2.6 最終成果(Impact)
