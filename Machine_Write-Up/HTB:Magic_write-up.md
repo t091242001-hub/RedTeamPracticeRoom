@@ -225,7 +225,7 @@ nc -lvnp 4444
 
 <img width="361" height="60" alt="螢幕擷取畫面 2026-03-08 230631" src="https://github.com/user-attachments/assets/9a91189f-636d-45ab-989f-302e2625ff1f" />
 
-獲得使用者權限的反彈Shell
+獲得使用者權限的反彈Shell，正式提權前記得斷線重連
 
 <img width="557" height="146" alt="螢幕擷取畫面 2026-03-08 230639" src="https://github.com/user-attachments/assets/39550e5d-1e5d-4c35-b2eb-20325a7500d6" />
 
