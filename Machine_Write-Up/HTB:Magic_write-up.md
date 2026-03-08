@@ -127,7 +127,7 @@ nc -lvnp 1234
 <img width="571" height="298" alt="螢幕擷取畫面 2026-03-08 220623" src="https://github.com/user-attachments/assets/0f731832-7ef6-44b6-ba28-808cac6af2ab" />
 <img width="1198" height="85" alt="螢幕擷取畫面 2026-03-08 220745" src="https://github.com/user-attachments/assets/506eb439-90eb-4722-b362-1cbed43a285f" />
 
-當前系統下並沒有安裝mysql，但有mysqldump，它是個備份工具，在連線下載或傳輸公用之前嘗試使用，看是否吐什麼情報出來，「Live off the land」
+當前系統下並沒有安裝mysql，但有mysqldump，它是個備份工具，在連線下載或傳輸共用之前嘗試使用，看是否吐什麼情報出來，「Live off the land」
 ```bash
 which mysql
 which mysqldump
