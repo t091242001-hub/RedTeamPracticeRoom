@@ -229,7 +229,7 @@ find / -perm -u=s -type f 2>/dev/null
 
 因backup檔執行後會跳出非常多東西，我打算先用strings查看，但並沒有安裝，所以我先使用ltrace查看
 ```bash
-whcih strings
+which strings
 which ltrace
 ```
 <img width="327" height="59" alt="螢幕擷取畫面 2026-03-19 014617" src="https://github.com/user-attachments/assets/5c9ce8c1-0028-4f29-978c-6e488e21f2b0" />
