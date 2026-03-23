@@ -173,7 +173,7 @@ java -jar jenkins-cli.jar -s http://10.129.230.220:8080 -http connect-node "@/et
 
 取得user.txt及root.txt
 
-(在利用Java讀取文件時，其實就可以讀取user.txt，但我並沒有那麼做，因為我並沒有獲得系統控制權，我個人認為未獲得系統控制權取得Flag並不理想，所以我才在最後用root的身分讀取user.txt。)
+(在利用Java讀取文件時，其實就可以讀取user.txt，但我並沒有那麼做，因為我並沒有獲得系統控制權，我個人認為未獲得系統控制權取得Flag並不理想，所以我才在最後用root的身分讀取user.txt。我取得root權限後，有針對系統初始控制權進行搜索，並未取得有用的方法。)
 
 <img width="422" height="189" alt="螢幕擷取畫面 2026-03-20 234336" src="https://github.com/user-attachments/assets/ab125676-4753-473a-8c57-ef215c579115" />
 <img width="1010" height="222" alt="螢幕擷取畫面 2026-03-20 234611" src="https://github.com/user-attachments/assets/29836de9-b374-4f30-a517-f2bef01c9ef1" />
