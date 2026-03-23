@@ -126,7 +126,7 @@ netstat -tuplen
 
 使用curl確認內網80是否可疑
 ```bash
-surl 127.0.0.1:80
+curl 127.0.0.1:80
 ```
 <img width="803" height="70" alt="螢幕擷取畫面 2026-03-19 000720" src="https://github.com/user-attachments/assets/1d9f5a76-5f7c-4ace-87c0-2df29a8572d4" />
 
