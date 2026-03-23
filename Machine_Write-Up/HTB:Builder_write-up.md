@@ -105,6 +105,7 @@ java -jar jenkins-cli.jar -s http://10.129.230.220:8080 -http connect-node "@/et
 <img width="1084" height="321" alt="螢幕擷取畫面 2026-03-20 225017" src="https://github.com/user-attachments/assets/efaccac3-c1c6-4b02-ac53-d6a6da796856" />
 
 破解密碼雜湊，先將密碼雜湊儲存成文件，讓hashcat判別雜湊類型，再根據類型使用字典攻擊
+
 (hashcat是GPU運算，所以破解速度會比john使用CPU快，缺點就是不能自動偵測類型，比john多一個步驟。我絕大多數情況都是用john，爆不出來才用hashcat，因為靶機不會出太刁鑽的雜湊類型，不過以防萬一，不能不會hashcat。)
 
 <img width="577" height="141" alt="螢幕擷取畫面 2026-03-20 230101" src="https://github.com/user-attachments/assets/fcd966d8-bf8c-4f29-bffc-37401d7598bd" />
@@ -171,6 +172,7 @@ java -jar jenkins-cli.jar -s http://10.129.230.220:8080 -http connect-node "@/et
 ### 2.5 最終成果(Impact)
 
 取得user.txt及root.txt
+
 (在利用Java讀取文件時，其實就可以讀取user.txt，但我並沒有那麼做，因為我並沒有獲得系統控制權，我個人認為未獲得系統控制權取得Flag並不理想，所以我才在最後用root的身分讀取user.txt。)
 
 <img width="422" height="189" alt="螢幕擷取畫面 2026-03-20 234336" src="https://github.com/user-attachments/assets/ab125676-4753-473a-8c57-ef215c579115" />
