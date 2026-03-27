@@ -221,7 +221,7 @@ ssh -L 8443:127.0.0.1:8443 nadine@10.129.227.77
 
 <img width="1305" height="628" alt="螢幕擷取畫面 2026-03-26 202105" src="https://github.com/user-attachments/assets/5b3533ca-0887-4186-820e-f540dd4f5d2d" />
 
-若是.ps1路線要先呼叫powershell.exe，並且使用-ExecutionPolicy Bypass繞過執行原則，但這很引人注目，
+若是.ps1路線要先呼叫powershell.exe，並且使用-ExecutionPolicy Bypass繞過執行原則，我們可以這樣做，因為是以SYSTEM權限進行的，但這很引人注目，
 
 <img width="976" height="309" alt="螢幕擷取畫面 2026-03-26 224750" src="https://github.com/user-attachments/assets/887a7455-d0f2-4463-b6c4-6728ee60c47a" />
 
