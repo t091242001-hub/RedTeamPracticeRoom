@@ -239,7 +239,7 @@ Control裡Reload
 
 呼叫腳本原本可以使用網頁中的Queries，在其中點擊建立的腳本後點擊run，就能收到反彈Shell，但我使用時一直卡住，甚至我都有點生氣了。我之後看了很多關於這個靶機的留言討論和write up，貌似不是我的問題，所以我直接用curl呼叫
 ```bash
-curl -u admin:passward -k "http://127.0.0.1:8443/query/shell"
+curl -u admin:password -k "http://127.0.0.1:8443/query/shell"
 ```
 
 <img width="708" height="71" alt="螢幕擷取畫面 2026-03-26 225353" src="https://github.com/user-attachments/assets/2278057d-cd81-4dff-aeac-3c9229cd89cc" />
